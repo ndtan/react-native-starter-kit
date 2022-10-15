@@ -69,6 +69,18 @@ The project is _super_ helpful to kick-start your next project, as it provides a
 yarn install && ( cd ios && pod install )
 ```
 
+#### Appcenter
+##### iOS
+Replace AppSecret key in file AppCenter-Config.plist by your app's key.
+##### Android
+Replace app_secret key in file appcenter-config.json by your app's key.
+
+#### Codepush
+##### iOS
+Replace CodePushDeploymentKey key in file Info.plist by your app's key.
+##### Android
+Replace CodePushDeploymentKey key in file strings.xml by your app's key.
+
 #### iOS
 
 ```bash
