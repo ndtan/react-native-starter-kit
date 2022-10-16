@@ -10,6 +10,7 @@ const translationGetters = {
 };
 
 export const i18n = new I18n();
+i18n.missingBehavior = 'guess';
 
 const translate = memoize(
   (key, config) => i18n.t(key, config),
@@ -34,8 +35,6 @@ export const setI18nConfig = () => {
   };
 
   i18n.locale = languageTag;
-
-  i18n.missingBehavior = 'guess';
 };
 
 export default translate;
