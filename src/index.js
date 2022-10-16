@@ -8,6 +8,7 @@ import SplashScreen from 'react-native-splash-screen';
 import { Root, StyleProvider } from 'native-base';
 import getTheme from '../native-base-theme/components';
 import theme from '../native-base-theme/variables/commonColor';
+import { setI18nConfig } from './translations';
 
 import Routes from './routes/index';
 import Loading from './components/UI/Loading';
@@ -15,6 +16,7 @@ import Loading from './components/UI/Loading';
 class App extends React.Component {
   constructor() {
     super();
+    setI18nConfig();
     this.state = { loading: true };
   }
 
