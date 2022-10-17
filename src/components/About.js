@@ -1,14 +1,14 @@
 import React from 'react';
 import {
-  Container, Content, Text, H1, H2, H3,
+  Container, Box, Text
 } from 'native-base';
 import Spacer from './UI/Spacer';
 
 const About = () => (
   <Container>
-    <Content padder>
+    <Box padder>
       <Spacer size={30} />
-      <H1>Heading 1</H1>
+      <Text>Heading 1</Text>
       <Spacer size={10} />
       <Text>
         Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
@@ -18,7 +18,7 @@ const About = () => (
       </Text>
 
       <Spacer size={30} />
-      <H2>Heading 2</H2>
+      <Text>Heading 2</Text>
       <Spacer size={10} />
       <Text>
         Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
@@ -28,7 +28,7 @@ const About = () => (
       </Text>
 
       <Spacer size={30} />
-      <H3>Heading 3</H3>
+      <Text>Heading 3</Text>
       <Spacer size={10} />
       <Text>
         Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
@@ -36,7 +36,7 @@ const About = () => (
         Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
         {' '}
       </Text>
-    </Content>
+    </Box>
   </Container>
 );
 

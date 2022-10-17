@@ -27,7 +27,7 @@ export const truncate = (inputContent, numWords) => {
   let content = inputContent.trim();
 
   // Convert the content into an array of words
-  const contentArr = content.split(' ');
+  const contentArr = (content || '').split(' ');
 
   // Remove any words above the limit
   content = contentArr.slice(0, limit);

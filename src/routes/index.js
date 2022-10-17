@@ -18,34 +18,31 @@ const Index = (
         showLabel={false}
         {...DefaultProps.tabProps}
       >
-        <Stack
+        <Scene
           key="home"
           title={AppConfig.appName}
           icon={() => <Icon name="planet" {...DefaultProps.icons} />}
+          component={AboutComponent}
           {...DefaultProps.navbarProps}
-        >
-          <Scene key="home" component={AboutComponent} />
-        </Stack>
+        />
 
-        <Stack
+        <Scene
           key="articlesList"
           title="Articles List"
           icon={() => <Icon name="list" {...DefaultProps.icons} />}
           {...DefaultProps.navbarProps}
-        >
-          <Scene key="articlesList" component={ArticlesList} />
-          <Scene key="articlesSingle" component={ArticlesSingle} back />
-        </Stack>
+          component={ArticlesList}
+        />
 
-        <Stack
+        <Scene
           key="form"
           title="Articles Form"
           icon={() => <Icon name="add" {...DefaultProps.icons} />}
           {...DefaultProps.navbarProps}
-        >
-          <Scene key="form" component={ArticlesForm} />
-        </Stack>
+          component={ArticlesForm}
+        />
       </Tabs>
+      <Scene key="articlesSingle" component={ArticlesSingle} back />
     </Scene>
   </Stack>
 );

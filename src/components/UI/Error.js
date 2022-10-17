@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Container, Text, H3, Button, View,
+  Container, Text, Button, View,
 } from 'native-base';
 import Spacer from './Spacer';
 
@@ -9,7 +9,7 @@ const Error = ({ title, content, tryAgain }) => (
   <Container style={{ flex: 1 }}>
     <View style={{ alignSelf: 'center' }}>
       <Spacer size={20} />
-      <H3 style={{ textAlign: 'center' }}>{title}</H3>
+      <Text style={{ textAlign: 'center' }}>{title}</Text>
       <Text style={{ textAlign: 'center', marginBottom: 20 }}>{content}</Text>
       {tryAgain && (
         <Button block onPress={tryAgain}>

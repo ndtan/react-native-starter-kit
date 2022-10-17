@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Actions } from 'react-native-router-flux';
 import { FlatList, TouchableOpacity, Image } from 'react-native';
 import {
-  Container, Card, CardItem, Body, Text, Button,
+  Container, Card, Text, Button,
 } from 'native-base';
 import { Error, Spacer } from '../UI';
 import { errorMessages } from '../../constants/messages';
@@ -36,31 +36,25 @@ const ArticlesList = ({
               )}
               style={{ flex: 1 }}
             >
-              <CardItem cardBody>
-                {!!item.image && (
-                  <Image
-                    source={{ uri: item.image }}
-                    style={{
-                      height: 100,
-                      width: null,
-                      flex: 1,
-                      overflow: 'hidden',
-                      borderRadius: 5,
-                      borderBottomLeftRadius: 0,
-                      borderBottomRightRadius: 0,
-                    }}
-                  />
-                )}
-              </CardItem>
-              <CardItem cardBody>
-                <Body style={{ paddingHorizontal: 15 }}>
-                  <Spacer size={10} />
-                  <Text style={{ fontWeight: '800' }}>{item.name}</Text>
-                  <Spacer size={15} />
-                  {!!item.excerpt && <Text>{item.excerpt}</Text>}
-                  <Spacer size={5} />
-                </Body>
-              </CardItem>
+              {!!item.image && (
+                <Image
+                  source={{ uri: item.image }}
+                  style={{
+                    height: 100,
+                    width: null,
+                    flex: 1,
+                    overflow: 'hidden',
+                    borderRadius: 5,
+                    borderBottomLeftRadius: 0,
+                    borderBottomRightRadius: 0,
+                  }}
+                />
+              )}
+              <Spacer size={10} />
+              <Text style={{ fontWeight: '800' }}>{item.name}</Text>
+              <Spacer size={15} />
+              {!!item.excerpt && <Text>{item.excerpt}</Text>}
+              <Spacer size={5} />
             </TouchableOpacity>
           </Card>
         )}

@@ -5,7 +5,7 @@ import { Router, Stack } from 'react-native-router-flux';
 import { PersistGate } from 'redux-persist/es/integration/react';
 import SplashScreen from 'react-native-splash-screen';
 
-import { Root, StyleProvider } from 'native-base';
+import { NativeBaseProvider } from 'native-base';
 import getTheme from '../native-base-theme/components';
 import theme from '../native-base-theme/variables/commonColor';
 import { setI18nConfig } from './translations';
@@ -34,17 +34,15 @@ class App extends React.Component {
     }
 
     return (
-      <Root>
+      <NativeBaseProvider>
         <Provider store={store}>
           <PersistGate loading={<Loading />} persistor={persistor}>
-            <StyleProvider style={getTheme(theme)}>
-              <Router>
-                <Stack key="root">{Routes}</Stack>
-              </Router>
-            </StyleProvider>
+            <Router>
+              <Stack key="root">{Routes}</Stack>
+            </Router>
           </PersistGate>
         </Provider>
-      </Root>
+      </NativeBaseProvider>
     );
   }
 }
